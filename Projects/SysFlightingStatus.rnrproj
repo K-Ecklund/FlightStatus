@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>SysFlightingStatus</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <DeployOnline>False</DeployOnline>
+    <ProjectGuid>{f54dd43d-e228-4969-aa1d-702ff7a4931f}</ProjectGuid>
+    <Name>SysFlightingStatus</Name>
+    <RootNamespace>SysFlightingStatus</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="AxClass\SysFlightingStatusRefresh">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatusRefresh</Name>
+      <Link>Classes\SysFlightingStatusRefresh</Link>
+    </Content>
+    <Content Include="AxForm\SysFlightingStatus">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatus</Name>
+      <Link>Forms\SysFlightingStatus</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\SysFlightingStatusRefresh">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatusRefresh</Name>
+      <Link>Action Menu Items\SysFlightingStatusRefresh</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\SysFlightingStatus">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatus</Name>
+      <Link>Display Menu Items\SysFlightingStatus</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\SysFlightingStatusMaintain">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatusMaintain</Name>
+      <Link>Security Privileges\SysFlightingStatusMaintain</Link>
+    </Content>
+    <Content Include="AxTable\SysFlightingStatus">
+      <SubType>Content</SubType>
+      <Name>SysFlightingStatus</Name>
+      <Link>Tables\SysFlightingStatus</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Forms" />
+    <Folder Include="Classes" />
+    <Folder Include="Display Menu Items" />
+    <Folder Include="Action Menu Items" />
+    <Folder Include="Security Privileges" />
+    <Folder Include="Tables" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
+</Project>
